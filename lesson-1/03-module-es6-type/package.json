@@ -1,0 +1,16 @@
+{
+  "name": "01-common-js",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "type": "module",
+  "dependencies": {
+    "express": "^4.18.2"
+  },
+  "devDependencies": {
+    "tsc": "^2.0.4"
+  },
+  "scripts": {
+    "start": "node --expeindex.js"
+  }
+}
