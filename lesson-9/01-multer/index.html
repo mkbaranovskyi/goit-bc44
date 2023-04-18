@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <form id="myform" action="" enctype="multipart/form-data" method="post">
+    <input type="file" name="myfile" multiple> <br>
+    <input type="text" name="mytext"> <br>
+    <button type="submit">Submit</button>
+  </form>
+
+  <script>
+    const myform = document.getElementById('myform')
+    myform.addEventListener('submit', function (e) {
+      e.preventDefault();
+
+      const formData = new FormData()
+      formData.append('myfile', this.elements.myfile.files[0].value)
+      formData.append('mytext', this.elements.mytext.value)
+
+      fetch('http://localhost:3000', { method: 'post', body: formData })
+    })
+  </script>
+</body>
+
+</html>
