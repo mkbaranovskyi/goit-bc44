@@ -1,0 +1,11 @@
+{
+  "scripts": {
+    "start": "node app"
+  },
+  "dependencies": {
+    "ws": "^8.13.0"
+  },
+  "devDependencies": {
+    "@types/ws": "^8.5.4"
+  }
+}
